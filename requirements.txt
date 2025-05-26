@@ -1,4 +1,6 @@
 flask
+firebase-admin
 opencv-python
+face_recognition
 numpy
 gunicorn
