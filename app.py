@@ -7,13 +7,15 @@ import numpy as np
 import base64
 import os
 from datetime import datetime
+import json
 
 app = Flask(__name__)
 
-# Inicializar Firebase
-cred = credentials.Certificate("firebase_key.json")
+# Inicializar Firebase desde variable de entorno
+cred_dict = json.loads(os.environ['GOOGLE_APPLICATION_CREDENTIALS_JSON'])
+cred = credentials.Certificate(cred_dict)
 firebase_admin.initialize_app(cred, {
-    'storageBucket': 'esp32-face-lock.appspot.com'  # ejemplo: 'esp32-doorlock.appspot.com'
+    'storageBucket': 'esp32-face-lock.appspot.com'  # REEMPLAZA si es necesario
 })
 bucket = storage.bucket()
 

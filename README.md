@@ -1,3 +1,3 @@
-# Face Lock Server
+# ESP32 Firebase Recognizer
 
-Servidor Flask que responde a imágenes enviadas por una ESP32-CAM y responde si el rostro es autorizado o no.
+Servidor Flask con Firebase Storage y reconocimiento facial compatible con ESP32-CAM.
